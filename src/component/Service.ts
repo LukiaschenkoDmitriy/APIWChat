@@ -13,6 +13,11 @@ export class Service {
         })
     }
 
+    public getUserToken(): Promise<string | null>
+    {
+        return this.connector.getUserToken();
+    }
+
     public setJwt(token: string)
     {
         this.connector.setJwToken(token);
